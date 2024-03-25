@@ -1,6 +1,5 @@
 import { Center, Stack, Container, Text, Group, Button } from "@mantine/core";
 import { IconBrandGoogle } from "@tabler/icons-react";
-import { IconBrandGithub } from "@tabler/icons-react";
 import { signIn } from "next-auth/react";
 
 const UnaunthenticatedScreen = () => {
@@ -36,16 +35,8 @@ const UnaunthenticatedScreen = () => {
           >
             Get started
           </Button>
-          <Button
-            size="md"
-            variant="gradient"
-            gradient={{ from: "blue", to: "cyan" }}
-            leftIcon={<IconBrandGithub size={20} />}
-            onClick={() => signIn("github")}
-          >
-            Get started
-          </Button>
-        </Group>
+          
+       </Group>
       </Stack>
     </Center>
   );

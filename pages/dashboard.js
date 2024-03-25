@@ -1,29 +1,34 @@
-import { MantineProvider } from "@mantine/core";
-import { SessionProvider } from "next-auth/react";
-import "node_modules/react-modal-video/scss/modal-video.scss";
-import { Notifications } from "@mantine/notifications";
-import Layout from "@/components/layout";
+import PopularMovies from '@/components/sections/PopularMovies'
+import {
+  getOpeningMovies,
+  getPopularMovies,
+} from '@/lib/requests/movieRequests'
+import { Space } from '@mantine/core'
+import OpeningMovies from '@/components/sections/OpeningMovies'
 
-
-
-function MyApp({ Component, pageProps: { session, ...pageProps } }) {
+const Dashboard = ({ openingMoviesData, popularMoviesData }) => {
   return (
-    <MantineProvider
-      withGlobalStyles
-      withNormalizeCSS
-      theme={{
-        colorScheme: "dark",
-      }}
-    >
-      
-      <Notifications />
-      <SessionProvider session={session}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </SessionProvider>
-    </MantineProvider>
-  );
+    <>
+      <PopularMovies popularMovies={popularMoviesData} />
+      <Space h="lg" />
+      <OpeningMovies openingMovies={openingMoviesData} />
+    </>
+  )
 }
 
-export default MyApp;
+export async function getStaticProps() {
+  // Load opening movies
+  const openingMoviesData = await getOpeningMovies()
+
+  // Load popular movies
+  const popularMoviesData = await getPopularMovies()
+
+  return {
+    props: {
+      openingMoviesData,
+      popularMoviesData,
+    },
+  }
+}
+
+export default Dashboard

@@ -1,10 +1,9 @@
-import { MantineProvider } from "@mantine/core";
-import { SessionProvider } from "next-auth/react";
-import "node_modules/react-modal-video/scss/modal-video.scss";
-import { Notifications } from "@mantine/notifications";
-import Layout from "@/components/layout";
-
-
+import { MantineProvider } from '@mantine/core'
+import { SessionProvider } from 'next-auth/react'
+import 'node_modules/react-modal-video/scss/modal-video.scss'
+import { Notifications } from '@mantine/notifications'
+import Layout from '../components/layout'
+import RouterTransition from '@/components/RouterTransition'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (
@@ -12,10 +11,10 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
       withGlobalStyles
       withNormalizeCSS
       theme={{
-        colorScheme: "dark",
+        colorScheme: 'dark',
       }}
     >
-      
+      <RouterTransition />
       <Notifications />
       <SessionProvider session={session}>
         <Layout>
@@ -23,7 +22,7 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) {
         </Layout>
       </SessionProvider>
     </MantineProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp
