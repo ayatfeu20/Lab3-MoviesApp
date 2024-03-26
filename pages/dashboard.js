@@ -5,6 +5,7 @@ import {
 } from '@/lib/requests/movieRequests'
 import { Space } from '@mantine/core'
 import OpeningMovies from '@/components/sections/OpeningMovies'
+import React from 'react'
 
 const Dashboard = ({ openingMoviesData, popularMoviesData }) => {
   return (
