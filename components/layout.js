@@ -2,6 +2,7 @@ import { useSession } from 'next-auth/react'
 import Header from './navigation/Header'
 import { Container } from '@mantine/core'
 import Footer from './Footer'
+import React from 'react'
 
 function Layout({ children }) {
   const { data: session } = useSession()

@@ -4,6 +4,7 @@ import 'node_modules/react-modal-video/scss/modal-video.scss'
 import { Notifications } from '@mantine/notifications'
 import Layout from '../components/layout'
 import RouterTransition from '@/components/RouterTransition'
+import React from 'react'
 
 function MyApp({ Component, pageProps: { session, ...pageProps } }) {
   return (

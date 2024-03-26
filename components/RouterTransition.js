@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { NavigationProgress, nprogress } from "@mantine/nprogress";
+import React from "react";
 
 export function RouterTransition() {
   const router = useRouter();

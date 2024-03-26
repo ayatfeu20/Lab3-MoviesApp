@@ -1,6 +1,7 @@
 import { Center, Stack, Container, Text, Group, Button } from "@mantine/core";
 import { IconBrandGoogle } from "@tabler/icons-react";
 import { signIn } from "next-auth/react";
+import React from "react";
 
 const UnaunthenticatedScreen = () => {
   return (
