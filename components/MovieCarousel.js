@@ -1,5 +1,6 @@
 import { Carousel } from "@mantine/carousel";
 import MovieSummaryCard from "./MovieSummaryCard";
+import React from "react";
 
 function MovieCarousel({ movies }) {
   return (

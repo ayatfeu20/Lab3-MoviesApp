@@ -1,5 +1,6 @@
 import { Card, Image, Text, Button, Rating, Stack } from "@mantine/core";
 import Link from "next/link";
+import React from "react";
 
 export function MovieSummaryCard({ id, name, image, rating, variant }) {
   const roundedRating = rating / 2 / 10;

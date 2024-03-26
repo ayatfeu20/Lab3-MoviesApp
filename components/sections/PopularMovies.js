@@ -1,6 +1,6 @@
 import { Title, Space } from "@mantine/core";
 import MovieCarousel from "../MovieCarousel";
-
+import React from "react";
 function PopularMovies({ popularMovies }) {
   return (
     <>

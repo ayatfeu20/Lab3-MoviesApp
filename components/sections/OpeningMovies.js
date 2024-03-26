@@ -1,6 +1,7 @@
 import { Title, Space } from "@mantine/core";
 import { MovieSummaryCard } from "../MovieSummaryCard";
 import { Carousel } from "@mantine/carousel";
+import React from "react";
 
 function OpeningMovies({ openingMovies }) {
   return (

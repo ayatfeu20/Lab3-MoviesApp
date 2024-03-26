@@ -270,6 +270,7 @@ export async function getServerSideProps({ query, req, res }) {
   const bookmark = await prisma.watchlist.findUnique({
     where: { userId_movieId: { movieId: emsVersionId, userId } },
   });
+  
   const bookmarked = !!bookmark;
 
   return {
