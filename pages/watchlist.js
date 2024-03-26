@@ -1,6 +1,7 @@
 import MovieCarousel from "@/components/MovieCarousel";
 import SkeletonLoader from "@/components/skeletonLoader";
 import { useWatchlist } from "@/lib/hooks/useWatchlist";
+import React from "react";
 import { Carousel } from "@mantine/carousel";
 import {
   Button,

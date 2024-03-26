@@ -1,6 +1,7 @@
 import MovieCarousel from "@/components/MovieCarousel";
 import SearchInput from "@/components/SearchInput";
 import SkeletonLoader from "@/components/skeletonLoader";
+import React from "react";
 
 import { Center, Space, Stack, Text, Title } from "@mantine/core";
 import { useState } from "react";
